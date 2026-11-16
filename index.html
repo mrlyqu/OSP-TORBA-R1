@@ -4,6 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Lista kontrolna PSP R1</title>
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#23405f">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="PSP R1">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600;700&family=Inter:wght@400;500;600&display=swap">
 <style>
 /* Layout: sticky summary bar with menu over two checklists (opatrunkowy, tlenowy); rows = check, quantity, expiry date; edit mode swaps rows for form fields. */
@@ -811,5 +817,8 @@ body{margin:0}
 })();
 </script>
 
+<script>
+if ("serviceWorker" in navigator) { window.addEventListener("load", function () { navigator.serviceWorker.register("sw.js").catch(function () {}); }); }
+</script>
 </body>
 </html>
